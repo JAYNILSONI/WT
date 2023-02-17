@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            width: 50%;
+            border-radius: 5%;
+        }
+        #table-container {
+        display: none;
+    }
+    #image:hover + #table-container {
+        display: block;
+    }
+    </style>
+</head>
+<body align="center">
+    <div id="image-container">
+    <img src="/practice/Screenshot 2023-01-19 at 10.58.05 PM.png" id="image" alt="Example Image">
+    <div id="table-container" style="display:none;">
+        <table align="center">
+            <tr>
+                <th>Tree</th>
+            </tr>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    var image = document.getElementById("image");
+    var table = document.getElementById("table-container");
+
+    image.addEventListener("mouseover", function() {
+        table.style.display = "block";
+    });
+
+    image.addEventListener("mouseout", function() {
+        table.style.display = "none";
+    });
+</script>
+</body>
+</html>
